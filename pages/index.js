@@ -4,6 +4,7 @@ import {handleError} from "../lib/helper";
 import {useEffect} from "react";
 import {toast} from "react-toastify";
 import ProductsTab from "@/components/product/ProductsTab";
+import About from "@/components/About";
 
 const Home = ({ productsTab, error }) => {
 
@@ -15,6 +16,7 @@ const Home = ({ productsTab, error }) => {
         <>
             <Features />
             {productsTab && <ProductsTab tabs={productsTab} />}
+            <About />
         </>
     )
 }
