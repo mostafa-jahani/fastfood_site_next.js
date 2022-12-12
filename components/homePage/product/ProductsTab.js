@@ -39,7 +39,7 @@ const ProductsTab = ({tabs}) => {
 
 
                 <div className="btn-box">
-                    <a href="">
+                    <a href="@/components/homePage/product/ProductsTab">
                         مشاهده بیشتر
                     </a>
                 </div>

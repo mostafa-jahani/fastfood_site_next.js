@@ -6,7 +6,7 @@ const Product = ({ product }) => {
         <div className="box">
             <div>
                 <div className="img-box">
-                    <Image className="img-fluid" src={product.primary_image} width={366} height={244} placeholder="blur" blurDataURL={product.primary_image_blurDataURL} />
+                    <Image className="img-fluid" src={product.primary_image} width={366} height={244} placeholder="blur" blurDataURL={product.primary_image_blurDataURL} alt="Product Image" />
                 </div>
                 <div className="detail-box">
                     <h5>{product.name}</h5>
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
                             )}
                             <span>تومان</span>
                         </h6>
-                        <a href="">
+                        <a href="@/components/homePage/product/Product">
                             <i className="bi bi-cart-fill text-white fs-5"></i>
                         </a>
                     </div>

@@ -1,12 +1,14 @@
-import Features from "@/components/Features";
+import Features from "@/components/homePage/Features";
 import axios from "axios";
 import {handleError} from "../lib/helper";
 import {useEffect} from "react";
 import {toast} from "react-toastify";
-import ProductsTab from "@/components/product/ProductsTab";
-import About from "@/components/About";
+import ProductsTab from "@/components/homePage/product/ProductsTab";
+import About from "@/components/homePage/About";
+import ContactUs from "@/components/homePage/contact/ContactUs";
 
-const Home = ({ productsTab, error }) => {
+
+const Home = ({productsTab, error}) => {
 
     useEffect(() => {
         error && toast.error(error)
@@ -14,16 +16,15 @@ const Home = ({ productsTab, error }) => {
 
     return (
         <>
-            <Features />
-            {productsTab && <ProductsTab tabs={productsTab} />}
-            <About />
+            <Features/>
+            {productsTab && <ProductsTab tabs={productsTab}/>}
+            <About/>
+            <ContactUs/>
         </>
     )
 }
 
 export default Home;
-
-
 
 
 export async function getServerSideProps() {
