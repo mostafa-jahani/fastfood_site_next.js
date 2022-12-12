@@ -5,6 +5,7 @@ const Map = dynamic(() => import('@/components/homePage/contact/Map'), { ssr: fa
 
 const ContactPage = () => {
     return (
+
         <section className="book_section layout_padding">
             <div className="container">
                 <div className="heading_container">

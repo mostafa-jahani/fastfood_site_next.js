@@ -8,7 +8,13 @@ import Header from "@/components/layout/Header";
 import {ToastContainer} from "react-toastify";
 import axios from "axios";
 import Footer from "@/components/layout/Footer";
+import Router from "next/router";
+import NProgress from 'nprogress'
 
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_API_URL
 
