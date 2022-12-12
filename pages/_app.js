@@ -7,6 +7,7 @@ import {useEffect} from "react";
 import Header from "@/components/layout/Header";
 import {ToastContainer} from "react-toastify";
 import axios from "axios";
+import Footer from "@/components/layout/Footer";
 
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_API_URL
@@ -21,6 +22,7 @@ function MyApp({Component, pageProps}) {
         <>
             <Header/>
             <Component {...pageProps} />
+            <Footer/>
             <ToastContainer />
         </>
     )
